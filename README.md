@@ -34,4 +34,6 @@ Please check out our [Contribution Guide](CONTRIBUTING.md) first. Also, make sur
 Click on the button below to start your development enviroment.
 [![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/b83s/tana-import-tools-amplenote)
 
-For windows users, i use [scoop](https://scoop.sh/#/) to install okteto and kubectl to launch.
+For windows users, i use [scoop](https://scoop.sh/#/) to install okteto launch.
+
+When your instance is ready on Okteto run: `okteto up` and you are good to go.
