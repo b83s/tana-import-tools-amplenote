@@ -13,7 +13,6 @@
     "ci": "yarn lint && yarn test",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint --ext .ts src/",
-    "prepare": "rm -rf dist/ && ./node_modules/.bin/tsc  --project tsconfig.build.json",
     "build": "yarn prepare",
     "convert:roam": "yarn build && node --experimental-modules --es-module-specifier-resolution=node dist/runner.js roam",
     "convert:workflowy": "yarn build && node --experimental-modules --es-module-specifier-resolution=node dist/runner.js workflowy",

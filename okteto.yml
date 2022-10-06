@@ -1,0 +1,13 @@
+build:
+  tana-import:
+    image: okteto.dev/node-tana-import:1.0.0
+    context: .
+deploy:
+  - kubectl apply -f k8s.yml
+dev:
+  tana-import:
+    command: bash
+    sync:
+      - .:/usr/src/app
+    forward:
+      - 9229:9229

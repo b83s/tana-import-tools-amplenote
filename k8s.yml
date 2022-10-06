@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tana-import
+spec:
+  selector:
+    matchLabels:
+      app: tana-import
+  template:
+    metadata:
+      labels:
+        app: tana-import
+    spec:
+      containers:
+        - image: okteto.dev/node-tana-import:1.0.0
+          name: tana-import
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: tana-import
+spec:
+  type: ClusterIP
+  ports:
+    - name: "tana-import"
+      port: 3000
+  selector:
+    app: tana-import
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tana-import
+  annotations:
+    dev.okteto.com/generate-host: tana-import
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: tana-import
+                port:
+                  number: 3000
+            path: /
+            pathType: ImplementationSpecific

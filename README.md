@@ -28,3 +28,10 @@ If you are making changes that you think will benefit other users, please create
 We are always looking for new importers and as well as improvements to existing ones! Contributions from open-source developers are greatly appreciated.
 
 Please check out our [Contribution Guide](CONTRIBUTING.md) first. Also, make sure you read our [Code of Conduct](CODE_OF_CONDUCT.md)
+
+# Okteto install
+
+Click on the button below to start your development enviroment.
+[![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/b83s/tana-import-tools-amplenote)
+
+For windows users, i use [scoop](https://scoop.sh/#/) to install okteto and kubectl to launch.
